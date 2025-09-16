@@ -24,12 +24,16 @@ Jump Instruction (JMP)
 I added a JMP instruction to let the CPU skip around in the program instead of just running straight through. It loads the PC with whatever address you give it, so you can loop or jump to different parts of the code. Pretty cool for a basic CPU!
 Simulation-Ready
 The whole design is set up to run in a testbench (cpu_tb.v), so you can simulate it without needing to flash it onto the FPGA right away. Instructions execute on the rising edge of the clock, which makes the timing straightforward to follow.
+**
+**File Structure
+Here’s how I organized the project:****
 
-File Structure
-Here’s how I organized the project:
+cpu.v: The top-level module that ties everything together—PC, ACC, ALU, and instruction memory.
 
-cpu.v: The top-level module that ties everything together—PC, ACC, ALU, and instruction memory. It’s like the brain of the operation.
 alu.v: This is where the ALU lives, handling all the arithmetic and logic operations.
+
 instruction_memory.v: Loads the program from prog.mem into memory. Uses $readmemb to read the binary instructions from the file.
+
 prog.mem: Just a text file with the binary machine code. You can edit this to change what the CPU does.
-cpu_tb.v: The testbench for simulating the CPU. I spent a lot of time tweaking this to make sure I could catch bugs before moving to the FPGA.
+
+cpu_tb.v: The testbench for simulating the CPU as at this stage the FPGA board was not needed.
