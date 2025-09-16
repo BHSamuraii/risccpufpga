@@ -24,9 +24,10 @@ Jump Instruction (JMP)
 I added a JMP instruction to let the CPU skip around in the program instead of just running straight through. It loads the PC with whatever address you give it, so you can loop or jump to different parts of the code. Pretty cool for a basic CPU!
 Simulation-Ready
 The whole design is set up to run in a testbench (cpu_tb.v), so you can simulate it without needing to flash it onto the FPGA right away. Instructions execute on the rising edge of the clock, which makes the timing straightforward to follow.
-**
+
+
 **File Structure
-Here’s how I organized the project:****
+Here’s how I organized the project:**
 
 cpu.v: The top-level module that ties everything together—PC, ACC, ALU, and instruction memory.
 
