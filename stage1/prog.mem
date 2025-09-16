@@ -1,0 +1,6 @@
+// Ensure to remove all comments before using file 
+00010010   // ADD 2
+00010001   // ADD 1
+00100001   // SUB 1
+01000100   // JMP 4
+00010011   // ADD 3
