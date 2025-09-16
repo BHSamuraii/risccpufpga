@@ -1,8 +1,6 @@
 **Stage 1: Simple 8-bit RISC CPU (5 instructions)**
 
-For the first stage, I built a super simple 8-bit RISC CPU in Verilog. I wanted to keep things minimal to really nail down the basics before diving into the fancy stuff like pipelining or VGA output in later stages.
-
-This CPU is designed with a Harvard architecture, meaning it has separate memory for instructions and data (at this stage the data memory purely just the accumulator). It’s got a basic accumulator (ACC) for processing, a program counter (PC) to keep track of what’s running, and a simple ALU to handle the math and logic. I also threw in a jump instruction to mix things up a bit. 
+For the first stage, I built a super simple 8-bit RISC CPU in Verilog. I wanted to keep things minimal to really nail down the basics before diving into the complex stuff like pipelining or VGA output in later stages.
 
 **Features (Stage 1)**
 
@@ -22,9 +20,8 @@ SUB: Subtracts an immediate value from the ACC.
 AND: Does a bitwise AND between the ACC and an immediate value.
 OR: Does a bitwise OR.
 
-I kept the instruction set small to make sure I got the basics right before adding more complex stuff later.
 Jump Instruction (JMP)
-I added a JMP instruction to let the CPU skip around in the program instead of just running straight through. It loads the PC with whatever address you give it, so you can loop or jump to different parts of the code. Pretty cool for a basic CPU!
+I added a JMP instruction to let the CPU jump around in the program instead of just running straight through the instructions in the prog.mem file - it loads the PC with whatever address you give it, so you can loop or jump to other instructions (breaking the otherwise sequential pattern)
 
 **File Structure
 Here’s how I organized the project:**
