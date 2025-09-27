@@ -18,10 +18,10 @@ module cpu_tb;
 
         // Initialize
         clk = 0;
-        reset = 1;
+        reset = 1; // Reset at t=0 - to ensure pc/acc goes to 0 
         #10
-        reset = 0;
-        // Run for 20 cycles (200ns)
+        reset = 0; // Start execution - this is where proper line by line execution of prog.mem begins unless obvs jmp/reset 
+        // Run for 20 cycles (200ns) 
         #70;
         $finish;
     end
