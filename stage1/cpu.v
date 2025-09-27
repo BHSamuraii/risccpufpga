@@ -35,8 +35,8 @@ module cpu (
                     pc  <= {4'b0000, operand};
                     acc <= acc; // hold accumulator
                 end
-                default: begin // else if not JMP instruction - 
-                    acc <= alu_out;   // always write back
+                default: begin // else if not JMP instruction 
+                    acc <= alu_out;   // always write back (i.e ensure whatever ALU just performed, we send to accumulator)
                     pc  <= pc + 1;    // incremented to point to next instruction
                 end
             endcase
