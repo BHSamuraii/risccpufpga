@@ -27,9 +27,9 @@ module cpu_tb;
     end
 
     // Monitor signals each cycle
-    initial begin
-        $display("Time | PC | Instruction | ACC");
-        $monitor("%4t | %2d | %08b | %d", 
-                 $time, uut.pc, uut.instr, uut.acc);
+    always @(posedge clk) begin
+    $display("%4t | %2d | %08b | %d", 
+             $time, uut.pc, uut.instr, uut.acc);
     end
+
 endmodule
