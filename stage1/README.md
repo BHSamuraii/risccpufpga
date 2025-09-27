@@ -8,7 +8,7 @@ I went with a Harvard-style setup, so the program memory (handled by instruction
 
 **Accumulator (ACC)**
 
-This was used as data storage to hold the current value.
+This was used as the only data storage - role is to hold the current value (RAM will be added in next stage!)
 
 **Program Counter (PC)**
 
