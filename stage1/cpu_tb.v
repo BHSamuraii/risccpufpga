@@ -22,14 +22,19 @@ module cpu_tb;
         #10
         reset = 0; // Start execution - this is where proper line by line execution of prog.mem begins unless obvs jmp/reset 
         // Run for 20 cycles (200ns) 
-        #70;
+        #60;
         $finish;
     end
 
-    // Monitor signals each cycle
+    reg [7:0] last_instr;
+    reg [7:0] last_pc;
+
     always @(posedge clk) begin
-    $display("%4t | %2d | %08b | %d", 
-             $time, uut.pc, uut.instr, uut.acc);
+        last_instr <= uut.instr;
+        last_pc    <= uut.pc;
+        // print the *previous* instruction with the current acc
+        $display("%4t | %2d | %08b | %d", 
+                $time, last_pc, last_instr, uut.acc);
     end
 
 endmodule
