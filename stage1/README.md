@@ -4,7 +4,7 @@ For the first stage, I built a super simple 8-bit RISC CPU in Verilog. I wanted 
 
 ### **Features (Stage 1)**
 
-I went with a Harvard-style setup, so the program memory (handled by instruction_memory.v) is totally separate from the data path. The instructions get loaded from a text file called prog.mem using Verilog’s $readmemb function. This makes it easy to swap out programs without messing with the hardware design.
+I went with a Harvard-style setup (this wil be a reoccuring theme throughout all stages), so the program memory (handled by instruction_memory.v) is totally separate from the data path. The instructions get loaded from a text file called prog.mem using Verilog’s $readmemb function. This makes it easy to swap out programs without messing with the hardware design.
 
 **Accumulator (ACC)**
 
