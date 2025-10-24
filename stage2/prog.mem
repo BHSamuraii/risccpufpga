@@ -1,0 +1,8 @@
+// Instruction values have remained same - but the meaning of each instruction has changed
+00000101 // ADD 5 --> add whatever in location 5 ( in our case its also 5 ) to acc! - ACC now equals 5 
+00000011 // ADD 3 --> add whatever in location 3 ( in our case its also 3 ) to acc! - ACC now equals 8
+00010010 // ADDI 2 --> add 2 to accumulator value (thus acc now equals 10)
+00100111 // SUB 7 --> sub ACC by whatever in location 7 ( in our case its also 7 ) - ACC now equals 3
+00110001 // SUBI 1 --> subtract accumulator by 1 (ACC is now 2)
+01110011 // OR 3 --> performs bitwise OR with current acc value and data at location 3 (thus ACC value is now 3)
+01101010 // LDA 10 --> loads data at location 10 in RAM into accumulator (thus ACC value is now also 10)
