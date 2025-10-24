@@ -1,4 +1,4 @@
-// Instruction values have remained same - but the meaning of each instruction has changed
+// First few instructions have remained same - but the meaning of each instruction has of course changed 
 00000101 // ADD 5 --> add whatever in location 5 ( in our case its also 5 ) to acc! - ACC now equals 5 
 00000011 // ADD 3 --> add whatever in location 3 ( in our case its also 3 ) to acc! - ACC now equals 8
 00010010 // ADDI 2 --> add 2 to accumulator value (thus acc now equals 10)
