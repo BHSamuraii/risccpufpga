@@ -45,4 +45,4 @@ cpu_tb.v: The testbench for simulating the CPU as at this stage the FPGA board w
 
 cu.v: Control Unit responsible for decoding the instruction and converting it into signals
 
-instruction_memory.v: This is where the RAM resides (storage of all data)
+data_memory.v: This is where the RAM resides (storage of all data)
