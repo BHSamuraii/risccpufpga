@@ -1,5 +1,5 @@
 
-# **Stage 2: Pipelined 8-bit RISC CPU (11 instructions)**
+# **Stage 2: 8-bit RISC CPU (11 instructions + permanent data storage)**
 
 For the second stage, I added RAM (16 addresses - each location having 8 bits of data). I also added a lot more instructions as a result (i.e now some instructions require memory fetch instead of only being immediate)
 
