@@ -10,10 +10,10 @@ module data_memory(
 
     reg [7:0] ram [0:15]; // Creates a register file containing 16 memory addresses (each location holds 8 bits, ascending order i.e ram[0] is first)
 
-    // RAM setup values (for first 10 locations, 0 to 9)
+    // RAM setup values (for all locations, 0 to 15)
     integer i;
     initial begin
-        for (i=0; i < 10; i = i+1) begin
+        for (i=0; i < 15; i = i+1) begin
             ram[i] = i;
         end
     end
