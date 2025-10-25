@@ -69,7 +69,7 @@ module cpu ( // Top Level Module (the parent to all other modules)
             acc <= 0;
         end else begin // Final checks of CU signals before executing instruction
             if (acc_write) begin
-                if (mem_read && !alu_en) begin
+                if (mem_read && !alu_en) begin // For LDA instruction ONLY
                     acc <= ram_data_out;
                 end else begin 
                     acc <= alu_out;
@@ -78,7 +78,7 @@ module cpu ( // Top Level Module (the parent to all other modules)
             end else if (pc_load) begin // JMP instruction
                 pc <= {4'b0000, operand};  
             end else begin
-                acc <= acc;
+                acc <= acc; // STA falls here: acc unchanged
                 pc = pc +1;
             end
         end
