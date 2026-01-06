@@ -1,3 +1,4 @@
+// Remove all comments from file before using
 00100010    // 0: ADD 2
 00010001    // 1: SUB 1
 00100101    // 2: ADD 5
