@@ -1,6 +1,5 @@
-// Remove all comments from file before using
-00100010    // 0: ADD 2
-00010001    // 1: SUB 1
-00100101    // 2: ADD 5
-01000100    // 3: JMP 4     ← jumps to address 4
-00100010    // 4: ADD 2     ← loop target
+00000010    // Address 0: ADDI 2   -> acc = acc + 2
+00010001    // Address 1: SUBI 1   -> acc = acc - 1
+00110101    // Address 2: ORI 5    -> acc = acc | 5
+01000100    // Address 3: JMP 4    -> pc = 4 (jump to address 4)
+00100010    // Address 4: ANDI 2   -> acc = acc & 2
