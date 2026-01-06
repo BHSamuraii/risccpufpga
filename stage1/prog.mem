@@ -1,5 +1,7 @@
-00000010    // Address 0: ADDI 2   -> acc = acc + 2
-00010001    // Address 1: SUBI 1   -> acc = acc - 1
-00110101    // Address 2: ORI 5    -> acc = acc | 5
-01000100    // Address 3: JMP 4    -> pc = 4 (jump to address 4)
-00100010    // Address 4: ANDI 2   -> acc = acc & 2
+// Remove comments before using file
+00000010 // Address 0: ADDI 2   -> acc = acc + 2 -> acc = 2
+00010001 // Address 1: SUBI 1   -> acc = acc - 1
+00110101 // Address 2: ORI  5   -> acc = 5
+01000101 // Address 3: JMP 5    -> pc = 4 (jump to address 4)
+00000010 // Address 0: ADDI 2   -> acc = acc + 2
+00100010 // Address 4: ANDI 2   -> acc = acc & 2
